@@ -3,7 +3,7 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtCore import *
 from PyQt5.QtWebEngineWidgets import *
 from PyQt5 import QtGui
-#class Window
+
 class Window(QMainWindow) :
     def __init__(self):
         super(Window,self).__init__()
@@ -12,13 +12,13 @@ class Window(QMainWindow) :
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl('https://google.com'))
         self.setCentralWidget(self.browser)
-        #en grand taille in 1st time
+        #Maximiz in 1st time 
         self.showMaximized()
 
-        #naving
+        #navbar
         navbar = QToolBar()
         self.addToolBar(navbar)
-        # back button
+        # Goback button
         back_button = QAction('GoBack',self)
         back_button.triggered.connect(self.browser.back)
         navbar.addAction(back_button)
