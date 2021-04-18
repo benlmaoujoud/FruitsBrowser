@@ -12,7 +12,7 @@ class Window(QMainWindow) :
         self.browser = QWebEngineView()
         self.browser.setUrl(QUrl('https://google.com'))
         self.setCentralWidget(self.browser)
-        #Maximiz in 1st time 
+        #Maximiz in the 1st time 
         self.showMaximized()
 
         #navbar
